@@ -55,7 +55,7 @@ h1{
 }
 button{
     margin-top: auto;
-    border: none;
+    border: none !important;
     background: none;
     cursor: pointer;
     text-transform: uppercase;
@@ -67,11 +67,13 @@ button{
     transition: all 2.0s;
     -webkit-transition:all 2.0s;
     -moz-transition: all 2.0s;
-
 }
 button:hover{
     background-color: rgb(75, 147, 182);
     color: ivory;
+}
+#reset{
+    border: none;
 }
 .selected{
     background-color: rgb(75, 147, 182);
