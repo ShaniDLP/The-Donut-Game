@@ -8,7 +8,11 @@ var correct = document.getElementById("correct");
 var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
 var easyBtn = document.getElementById("easyBtn");
-var hardyBtn = document.getElementById("hardBtn")
+var hardyBtn = document.getElementById("hardBtn");
+var hideDonuts = document.querySelectorAll(".showDonut.hideDonut");
+var hideDonuts = document.querySelectorAll(".showDonut.hideDonut");
+var elements = document.getElementsByClassName('showDonut hideDonut');
+
 
 
 //User clicked on "Easy" button : 3
@@ -56,19 +60,36 @@ for (var i = 0; i < circles.length; i++) {
         var clickedColor = this.style.backgroundColor;
         console.log(colors[i]);
         console.log( 'clickedColor'+clickedColor);
-        console.log( ' pickedColor'+ pickedColor);
+        console.log( 'pickedColor'+ pickedColor);
        
         if (clickedColor === pickedColor) {
             console.log('correct');
             correct.innerHTML = "Correct!";
             changedColorsToOthers(pickedColor);
             h1.style.backgroundColor = pickedColor;
+            // hideDonuts.classList.remove("hideDonut");
+        // [].forEach.call(hideDonuts, function(el) {
+        //         el.classList.remove("showDonut");
+        //         console.log(el+ 'el');
+        //     });
+        while(elements.length > 0){
+            elements[0].classList.remove('showDonut');
+        }
+
+        // for (var i = 0; i < elements.length; i++) {
+        //     elements[i].classList.remove('showDonut');
+        //  }
+            
+            // this.previousElementSibling.style.display = "none";
             resetButton.textContent = "Play again";
         } else {
             console.log('Try again');
             // this.parentElement.style.display = "none";
-            this.style.backgroundColor = "#232323";
+            // this.previousElementSibling.style.display = "block";
+            // this.style.backgroundColor = "#232323";
             correct.innerHTML = "Try again";
+            this.previousElementSibling.classList.add("showDonut");
+
         }
     });
 }
@@ -111,6 +132,8 @@ resetButton.addEventListener("click", function () {
     console.log("pickedColor" + pickedColor);
     //Display the numbers RGB of the chosen color
     colorDisplay.textContent = pickedColor; 
+    correct.innerHTML = "";
+   
 
     for (var i = 0; i < circles.length; i++) { 
         circles[i].style.backgroundColor = colors[i];
