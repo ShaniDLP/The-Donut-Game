@@ -8,7 +8,9 @@ var correct = document.getElementById("correct");
 var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
 var easyBtn = document.getElementById("easyBtn");
-var hardyBtn = document.getElementById("hardBtn")
+var hardyBtn = document.getElementById("hardBtn");
+var elements = document.getElementsByClassName('showDonut hideDonut');
+
 
 
 //User clicked on "Easy" button : 3
@@ -56,19 +58,23 @@ for (var i = 0; i < circles.length; i++) {
         var clickedColor = this.style.backgroundColor;
         console.log(colors[i]);
         console.log( 'clickedColor'+clickedColor);
-        console.log( ' pickedColor'+ pickedColor);
+        console.log( 'pickedColor'+ pickedColor);
        
         if (clickedColor === pickedColor) {
             console.log('correct');
             correct.innerHTML = "Correct!";
             changedColorsToOthers(pickedColor);
             h1.style.backgroundColor = pickedColor;
-            resetButton.textContent = "Play again";
+        // show all the donuts 
+        while(elements.length > 0){
+            elements[0].classList.remove('showDonut');
+        }
+         resetButton.textContent = "Play again";
         } else {
             console.log('Try again');
-            // this.parentElement.style.display = "none";
-            this.style.backgroundColor = "#232323";
             correct.innerHTML = "Try again";
+            this.previousElementSibling.classList.add("showDonut");
+
         }
     });
 }
@@ -111,6 +117,11 @@ resetButton.addEventListener("click", function () {
     console.log("pickedColor" + pickedColor);
     //Display the numbers RGB of the chosen color
     colorDisplay.textContent = pickedColor; 
+    correct.innerHTML = "";
+    while(elements.length > 0){
+        elements[0].classList.remove('showDonut');
+    }
+   
 
     for (var i = 0; i < circles.length; i++) { 
         circles[i].style.backgroundColor = colors[i];
