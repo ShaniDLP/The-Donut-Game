@@ -12,13 +12,13 @@ var hardyBtn = document.getElementById("hardBtn");
 var elements = document.getElementsByClassName('showDonut hideDonut');
 
 
-
+///
 //User clicked on "Easy" button : 3
 colorDisplay.textContent = pickedColor;
 easyBtn.addEventListener("click", function () {
     easyBtn.classList.add("selected");
     hardyBtn.classList.remove("selected");
-    numCircles = 3
+    numCircles = 3;
     colors = generateRandomColor(numCircles);
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
