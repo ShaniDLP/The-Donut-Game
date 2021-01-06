@@ -74,6 +74,7 @@ button{
     transition: all 2.0s;
     -webkit-transition:all 2.0s;
     -moz-transition: all 2.0s;
+    outline: none;
 }
 button:hover{
     background-color: rgb(75, 147, 182);

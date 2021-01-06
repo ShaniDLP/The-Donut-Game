@@ -30,8 +30,8 @@ easyBtn.addEventListener("click", function () {
             console.log(circles[i]);
         } else {
             // circles[i].parentElement.style.display = "none";
-            circles[i].style.display = "none";
-
+            // circles[i].style.display = "none";
+            circles[i].previousElementSibling.classList.add("showDonut");
         }
     }
 });
@@ -117,6 +117,7 @@ resetButton.addEventListener("click", function () {
     console.log("pickedColor" + pickedColor);
     //Display the numbers RGB of the chosen color
     colorDisplay.textContent = pickedColor; 
+    this.innerHTML = "New Colors";
     correct.innerHTML = "";
     while(elements.length > 0){
         elements[0].classList.remove('showDonut');
