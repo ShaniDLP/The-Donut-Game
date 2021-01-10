@@ -1,8 +1,8 @@
 var numCircles = 6;
 var colors = [];
+var pickedColor;
 var circles = document.querySelectorAll(".circle");
 var donut = document.querySelectorAll(".donut");
-var pickedColor;
 var colorDisplay = document.getElementById("colorDisplay");
 var correct = document.getElementById("correct");
 var h1 = document.querySelector("h1");
@@ -21,18 +21,16 @@ function init() {
 function pickLevel() {
     for (var i = 0; i < levels.length; i++) {
         levels[i].addEventListener("click", function () {
-            console.log('hard/easy clicked' + levels[i]);
             // levels[i].foreach(classList.remove("selected"));
             levels[0].classList.remove("selected");
             levels[1].classList.remove("selected");
-            levels[2].classList.remove("selected");
             this.classList.add("selected");
-            this.textContent === "Easy" ? numCircles = 3 : numCircles = 6;
-            // if (this.textContent == "Easy") {
-            //     numCircles = 3
-            // } else if (this.textContent == "Medium"){
-            //     numCircles = 6
-            // } else numCircles = 9
+            // this.textContent === "Easy" ? numCircles = 3 : numCircles = 6;
+            if (this.textContent == "Easy") {
+                numCircles = 3
+            } else if (this.textContent == "Hard"){
+                numCircles = 6
+            } else numCircles = 9
 
             reset();
         });
@@ -42,47 +40,6 @@ function pickLevel() {
 resetButton.addEventListener("click", function () {
     reset();
 });
-// colorDisplay.textContent = pickedColor;
-
-
-
-// //User clicked on "Easy" button : 3
-// colorDisplay.textContent = pickedColor;
-// easyBtn.addEventListener("click", function () {
-//     easyBtn.classList.add("selected");
-//     hardyBtn.classList.remove("selected");
-//     numCircles = 3;
-//     colors = generateRandomColor(numCircles);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor;
-//     //Change the circles colors
-//     for (var i = 0; i < circles.length; i++) {
-//         if (colors[i]) {
-//             //every circle accept a color from the array
-//             circles[i].style.backgroundColor = colors[i];
-//             console.log(circles[i]);
-//         } else {
-//             // circles[i].parentElement.style.display = "none";
-//             // circles[i].style.display = "none";
-//             circles[i].previousElementSibling.classList.add("showDonut");
-//         }
-//     }
-// });
-// //User clicked on "Hard" button :6
-// hardBtn.addEventListener("click", function () {
-//     easyBtn.classList.remove("selected");
-//     hardyBtn.classList.add("selected");
-//     colors = generateRandomColor(numCircles);
-//     pickedColor = pickColor();
-//     colorDisplay.textContent = pickedColor;
-//     //Change the circles colors
-
-//     for (var i = 0; i < circles.length; i++) {
-//         //every circle accept a color from the array
-//         circles[i].style.backgroundColor = colors[i];
-//         circles[i].style.display = "block";
-//     }
-// });
 
 // When user click on circles change the text to "correct" or "Try again"
 function setUpDonuts() {
@@ -96,17 +53,17 @@ function setUpDonuts() {
                 changedColorsToOthers(pickedColor);
                 h1.style.backgroundColor = pickedColor;
                 resetButton.textContent = "Play again";
-                
+
                 // show all the donuts 
                 while (elements.length > 0) {
                     elements[0].classList.remove('showDonut');
                 }
-                if(numCircles < 4){
-                    circles[3].previousElementSibling.classList.add('showDonut'); 
+                if (numCircles <= 3) {
+                    circles[3].previousElementSibling.classList.add('showDonut');
                     circles[4].previousElementSibling.classList.add('showDonut');
                     circles[5].previousElementSibling.classList.add('showDonut');
                 }
-                
+
                 //hide the current donut
             } else {
                 console.log('Try again');
@@ -114,7 +71,7 @@ function setUpDonuts() {
                 this.previousElementSibling.classList.add("showDonut");
 
             }
-           
+
         });
     }
 }
