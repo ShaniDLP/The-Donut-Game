@@ -36,6 +36,7 @@ hardBtn.addEventListener("click", function () {
     hardyBtn.classList.add("selected");
     colors = generateRandomColor(numCircles);
     pickedColor = pickColor();
+  
     colorDisplay.textContent = pickedColor;
     //Change the circles colors
 
@@ -51,8 +52,12 @@ for (var i = 0; i < circles.length; i++) {
     circles[i].style.backgroundColor = colors[i];
     circles[i].addEventListener("click", function () {
         var clickedColor = this.style.backgroundColor;
+        console.log( 'clickedColor'+clickedColor);
+        console.log( ' pickedColor'+ pickedColor);
         if (clickedColor === pickedColor) {
             correct.innerHTML = "Correct!";
+            console.log('correct');
+
             changedColorsToOthers(pickedColor);
             h1.style.backgroundColor = pickedColor;
             resetButton.textContent = "Play again";
@@ -100,7 +105,8 @@ resetButton.addEventListener("click", function () {
     pickedColor = pickColor();
     console.log("pickedColor" + pickedColor);
     //Display the numbers RGB of the chosen color
-    colorDisplay.textContent = pickedColor; 
+    colorDisplay.textContent = pickedColor;
+    correct.innerHTML = "";
 
     for (var i = 0; i < circles.length; i++) { 
         circles[i].style.backgroundColor = colors[i];
