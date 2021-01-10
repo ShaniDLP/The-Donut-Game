@@ -7,7 +7,7 @@ var colorDisplay = document.getElementById("colorDisplay");
 var correct = document.getElementById("correct");
 var h1 = document.querySelector("h1");
 var resetButton = document.getElementById("reset");
-var elements = document.getElementsByClassName('showDonut hideDonut');
+var elements = document.getElementsByClassName('active hideDonut');
 var levels = document.querySelectorAll(".level");
 
 init();
@@ -17,37 +17,37 @@ function init() {
     setUpDonuts();
     reset();
 }
-
+//when user click on buttons Hard/Easy pick the numCircles(3 or 6) and reset the colors
 function pickLevel() {
     for (var i = 0; i < levels.length; i++) {
         levels[i].addEventListener("click", function () {
-            // levels[i].foreach(classList.remove("selected"));
             levels[0].classList.remove("selected");
             levels[1].classList.remove("selected");
             this.classList.add("selected");
             // this.textContent === "Easy" ? numCircles = 3 : numCircles = 6;
             if (this.textContent == "Easy") {
                 numCircles = 3
-            } else if (this.textContent == "Hard"){
+            } else if (this.textContent == "Hard") {
                 numCircles = 6
             } else numCircles = 9
 
             reset();
         });
+
     }
 }
-
+//when user click on "play again" -> reset the game 
 resetButton.addEventListener("click", function () {
     reset();
 });
 
-// When user click on circles change the text to "correct" or "Try again"
+// When user click on circles-> change the text to "correct" or "Try again"
+//and hide the donuts that not correct
 function setUpDonuts() {
     for (var i = 0; i < circles.length; i++) {
         // circles[i].style.backgroundColor = colors[i];
         circles[i].addEventListener("click", function () {
             var clickedColor = this.style.backgroundColor;
-
             if (clickedColor === pickedColor) {
                 correct.innerHTML = "Correct!";
                 changedColorsToOthers(pickedColor);
@@ -56,22 +56,20 @@ function setUpDonuts() {
 
                 // show all the donuts 
                 while (elements.length > 0) {
-                    elements[0].classList.remove('showDonut');
+                    elements[0].classList.remove('active');
                 }
                 if (numCircles <= 3) {
-                    circles[3].previousElementSibling.classList.add('showDonut');
-                    circles[4].previousElementSibling.classList.add('showDonut');
-                    circles[5].previousElementSibling.classList.add('showDonut');
+                    circles[3].previousElementSibling.classList.add('active');
+                    circles[4].previousElementSibling.classList.add('active');
+                    circles[5].previousElementSibling.classList.add('active');
                 }
-
                 //hide the current donut
             } else {
                 console.log('Try again');
                 correct.innerHTML = "Try again";
-                this.previousElementSibling.classList.add("showDonut");
+                this.previousElementSibling.classList.add("active");
 
             }
-
         });
     }
 }
@@ -118,7 +116,7 @@ function reset() {
     correct.innerHTML = "";
     //display all the hided donuts
     while (elements.length > 0) {
-        elements[0].classList.remove('showDonut');
+        elements[0].classList.remove('active');
     }
 
     for (var i = 0; i < circles.length; i++) {
@@ -130,7 +128,7 @@ function reset() {
         } else {
             // circles[i].parentElement.style.display = "none";
             // circles[i].style.display = "none";
-            circles[i].previousElementSibling.classList.add("showDonut");
+            circles[i].previousElementSibling.classList.add("active");
 
         }
     }

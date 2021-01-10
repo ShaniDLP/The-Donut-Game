@@ -90,17 +90,17 @@ button:hover{
 .hideDonut{
  width: 115%;
  height: 115%;
- left: 0;
- top: 0;
+ left: -18px;
+ top: -15px;
  background-color: #3e3a3a;   
  z-index: 110;
  position: absolute;
  display: none;
 
-
+ 
 }
 /* . */
-.showDonut{
+.active{
 display: block !important;
 transition: all 1.5s;
 -webkit-transition:all 0.8s;
@@ -113,8 +113,8 @@ transition: all 1.5s;
     z-index: -200;
     border-radius: 50%;
     position: absolute;
-    /* -webkit-box-shadow: 0px 0px 20px 9px rgba(210,105,30,0.71); 
-    box-shadow: 0px 0px 20px 9px rgba(210,105,30,0.71);  */
+    /* -webkit-box-shadow: 0px 0px 10px 5px rgba(136, 130, 130, 0.938); 
+    box-shadow: 0px 0px 10px 5px  rgba(136, 130, 130, 0.938);  */
   }
   .internalDonut {
     background-color: chocolate;
