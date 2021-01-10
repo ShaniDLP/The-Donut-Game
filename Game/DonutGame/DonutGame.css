@@ -161,275 +161,136 @@ transition: all 1.5s;
     width: 7px;
     height: 25px;
     position: absolute;
+    border-radius: 40%;
+    z-index: 100;
+  }
+  .candy0 {
     background-color: rgb(240, 227, 53);
     left: 20px;
     top: 69px;
-    border-radius: 40%;
     transform: rotate(-20deg);
-  /*   border-style: solid;
-    border-width: medium; */
-    z-index: 100;
   }
-  .candies1 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy1 {
     background-color: rgb(255, 255, 255);
     left: 70px;
     top: 15px;
-    border-radius: 40%;
     transform: rotate(60deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    z-index: 100;
   }
-  .candies2 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy2 {
     background-color: rgb(255, 255, 255);
     left: 33px;
     top: 115px;
-    border-radius: 40%;
     transform: rotate(30deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+   
   }
-  .candies3 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
-    background-color: rgb(65, 19, 19);
+  .candy3 {
+   background-color: rgb(65, 19, 19);
     left: 70px;
     top: 150px;
-    border-radius: 40%;
-    transform: rotate(10deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(10deg);   
   }
-  .candies4 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy4 {
     background-color: rgb(79, 241, 57);
     left: 130px;
     top: 140px;
-    border-radius: 40%;
-    transform: rotate(-30deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(-30deg);     
   }
-  .candies5 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy5 {
     background-color: rgb(91, 99, 221);
     left: 160px;
     top: 70px;
-    border-radius: 40%;
-    transform: rotate(-70deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(-70deg);     
   }
-  .candies6 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy6 {    
     background-color: rgb(240, 227, 53);
     left: 150px;
-    top: 100px;
-    border-radius: 40%;
-    transform: rotate(80deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    top: 100px;  
+    transform: rotate(80deg);     
   }
-  .candies7 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy7 {    
     background-color: rgb(79, 241, 57);
     left: 154px;
-    top: 40px;
-    border-radius: 40%;
-    transform: rotate(-20deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    top: 40px;  
+    transform: rotate(-20deg);   
   }
-  .candies8 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy8 { 
     background-color: rgb(91, 99, 221);
     left: 101px;
     top: 150px;
-    border-radius: 40%;
     transform: rotate(72deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
   }
-  .candies9 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy9 {
     background-color: rgb(247, 48, 170);
     left: 44px;
     top: 143px;
-    border-radius: 40%;
-    transform: rotate(-50deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(-50deg);  
   }
-  .candies10 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy10 {
     background-color: rgb(65, 19, 19);
     left: 45px;
-    top: 61px;
-    border-radius: 40%;
-    transform: rotate(-110deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    top: 61px; 
+    transform: rotate(-110deg);     
   }
-  .candies11 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy11 {
     background-color: rgb(79, 241, 57);
     left: 60px;
     top: 20px;
-    border-radius: 40%;
-    transform: rotate(110deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(110deg);     
   }
-  .candies12 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy12 {
     background-color: rgb(240, 227, 53);
     left: 80px;
     top: 36px;
-    border-radius: 40%;
-    transform: rotate(-70deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(-70deg);   
   }
-  .candies13 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy13 {   
     background-color: rgb(91, 99, 221);
     left: 38px;
     top: 90px;
-    border-radius: 40%;
     transform: rotate(65deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
-  }
-  .candies14 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+    }
+  .candy14 {
     background-color: rgb(247, 48, 170);
     left: 105px;
     top: 24px;
-    border-radius: 40%;
-    transform: rotate(44deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(44deg);     
   }
-  .candies15 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy15 {
     background-color: rgb(247, 48, 170);
     left: 154px;
     top: 124px;
-    border-radius: 40%;
-    transform: rotate(44deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(44deg);     
   }
-  .candies16 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy16 {
     background-color: rgb(79, 241, 57);
     left: 58px;
     top: 124px;
-    border-radius: 40%;
-    transform: rotate(80deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(80deg);     
   }
-  .candies17 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy17 {
     background-color: rgb(255, 255, 255);
     left: 104px;
     top: 128px;
-    border-radius: 40%;
-    transform: rotate(80deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(80deg);     
   }
-  .candies18 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy18 {  
     background-color: rgb(65, 19, 19);
     left: 135px;
     top: 71px;
-    border-radius: 40%;
-    transform: rotate(158deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(158deg);     
   }
-  .candies19 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy19 {
     background-color: rgb(79, 241, 57);
-    z-index: 100;
-  
     left: 42px;
     top: 36px;
-    border-radius: 40%;
     transform: rotate(158deg);
-  /*   border-style: solid;
-    border-width: medium; */
   }
-  .candies20 {
-    width: 7px;
-    height: 25px;
-    position: absolute;
+  .candy20 {
     background-color: rgb(65, 19, 19);
     left: 127px;
     top: 40px;
-    border-radius: 40%;
-    transform: rotate(84deg);
-  /*   border-style: solid;
-    border-width: medium; */
-     z-index: 100;
+    transform: rotate(84deg);     
   }
   
 /* 
