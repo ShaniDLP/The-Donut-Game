@@ -27,9 +27,14 @@ body{
     margin: 20px;
     float:left;
     cursor: pointer;
-    transition: all 0.8s;
+    /* transition: all 0.8s;
     -webkit-transition:all 0.8s;
-    -moz-transition: all 0.8s;
+    -moz-transition: all 0.8s; */
+    transition: width 2s, height 2s, transform 2s;
+
+  }
+  .donut:hover{
+    transform: rotate(180deg);
   }
 h1{
     color: ghostwhite;
@@ -43,7 +48,7 @@ h1{
     text-transform: uppercase;
 }
 #correct{
-     display: inline-block;
+    display: inline-block;
     width:17%; 
     font-weight: 400;
     letter-spacing: 1;
@@ -94,6 +99,7 @@ button:hover{
  z-index: 110;
  position: absolute;
  display: none;
+ border-radius: 50%;
  
 }
 .active{
@@ -293,11 +299,16 @@ transition: all 1.5s;
     transform: rotate(84deg);     
   }
   
-/* 
-  @media (max-width: 599px) {
-    {
-       
- 
-    }
-} */
+
+  @media screen and (max-width: 599px){
+    
+     #stripe{
+      height: 80px;
+      font-size: 32px !important;
+     }   
+     button{
+      font-size: 32px !important;
+     }
+    
+}
   
