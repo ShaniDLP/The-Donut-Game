@@ -41,8 +41,6 @@ h1{
     font-size: 60px;
     letter-spacing: 1;
     text-transform: uppercase;
-
-
 }
 #correct{
      display: inline-block;
@@ -98,14 +96,13 @@ button:hover{
  display: none;
  
 }
-/* . */
 .active{
 display: block !important;
 transition: all 1.5s;
 -webkit-transition:all 0.8s;
 -moz-transition: all 0.8s;
 } 
-  .externalDonut{
+.externalDonut{
     background-color: #d2691e;
     width: 200px;
     height: 200px;
@@ -114,8 +111,8 @@ transition: all 1.5s;
     position: absolute;
     /* -webkit-box-shadow: 0px 0px 10px 5px rgba(136, 130, 130, 0.938); 
     box-shadow: 0px 0px 10px 5px  rgba(136, 130, 130, 0.938);  */
-  }
-  .internalDonut {
+}
+.internalDonut {
     background-color: chocolate;
     width: 80px;
     height: 80px;
@@ -124,8 +121,8 @@ transition: all 1.5s;
     top: 59px;
     border-radius: 50%;
     position: absolute;
-  }
-  .hole {
+}
+.hole {
     width: 70px;
     height: 70px;
     top: 64px;
@@ -135,7 +132,7 @@ transition: all 1.5s;
     z-index: 50;
     border-radius: 50%;
     float: left;
-  }
+}
   .shadow1{
      border-radius:70% 30% 78% 22% / 55% 27% 73% 45%;
     background-color: #ffffff;
