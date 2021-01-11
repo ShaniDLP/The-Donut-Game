@@ -17,7 +17,7 @@ body{
 } 
 #container{
     max-width: 730px;
-    margin: 30px auto;
+    margin: 15px auto;
     position: relative;
 }
 .donut {
@@ -43,9 +43,13 @@ h1{
     padding: 10px 0;
     margin: 0;
     font-weight: normal;
-    font-size: 60px;
+    font-size: 48px;
     letter-spacing: 1;
     text-transform: uppercase;
+}
+h1 > p{
+  font-size: 15px;
+  padding-bottom: 0;
 }
 #correct{
     display: inline-block;
